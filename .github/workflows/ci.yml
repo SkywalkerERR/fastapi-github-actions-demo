@@ -44,5 +44,5 @@ jobs: # Создаем задачу
         with:
           context: .
           push: true
-          tags: ${{ env.IMAGE_NAME }}:latest
+          tags: ${{ env.IMAGE_NAME }}:1.0.0
       
