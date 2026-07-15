@@ -5,4 +5,4 @@ app = FastAPI()
 
 @app.get("/")
 def root():
-    return {"message": "Hello CI/CD"}
+    return {"message": "Hello GitHub Actions!"}
