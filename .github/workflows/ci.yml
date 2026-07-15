@@ -9,5 +9,18 @@ jobs: # Создаем задачу
     runs-on: ubuntu-latest # Runner
     
     steps:
-      - name: Checkout code
+      - name: Checkout code # Скачивание кода с GitHub
         uses: actions/checkout@v4
+
+      - name: Setup Python # Установка Python на чистый Runner
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12" # Указываем точную версию
+
+      - name: Install dependencies # Установка зависимостей в ручную
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run Pytest # Запуск тестов
+        run: |
+          pytest
