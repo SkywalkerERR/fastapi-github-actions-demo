@@ -1,0 +1,10 @@
+name: CI # Название пайплайна
+
+on: # Триггер (Когда кто-то делает git push — запускай workflow.)
+  push
+
+jobs: # Создаем задачу
+
+  test: # Сама задача
+    runs-on: ubuntu-latest # Runner
+    
