@@ -24,3 +24,7 @@ jobs: # Создаем задачу
       - name: Run Pytest # Запуск тестов
         run: |
           pytest
+
+      - name: Build docker image
+        run: |
+          docker build -t fastapi-github-actions-demo .
